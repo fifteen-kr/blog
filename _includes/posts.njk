@@ -1,0 +1,9 @@
+{%- css %}.post-list { counter-reset: start-from {{ (postCounter or posts.length)+1 }}; } {% endcss %}
+<ol reversed class="post-list">
+{% for post in posts | reverse %}
+  <li class="post-item{% if post.url === url %} post-item-active{% endif %}">
+    <a href="{{ post.url }}" class="post-link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
+    <time class="post-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("yyyy-LL-dd") }}</time>
+  </li>
+{% endfor %}
+</ol>

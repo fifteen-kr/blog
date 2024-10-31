@@ -6,14 +6,25 @@
         <title>{{ title or metadata.title }}</title>
 		<meta name="description" content="{{ description or metadata.description }}"/>
         <meta name="generator" content="{{ eleventy.generator }}"/>
+        {%- css %}{% include "public/css/index.css" %}{% endcss %}
+        <style>{% getBundle "css" %}</style>
     </head>
     <body>
         <header>
+            <a href="/" class="home-link">{{ metadata.title }}</a>
+            <nav>
+                <ul class="nav">
+                {%- for entry in collections.all | eleventyNavigation %}
+                    <li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
+                {%- endfor %}
+                </ul>
+            </nav>
         </header>
         <main>
             {{ content | safe }}
         </main>
         <footer>
         </footer>
+        <script type="module" src="{% getBundleFileUrl "js" %}"></script>
     </body>
 </html>

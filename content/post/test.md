@@ -1,5 +1,5 @@
 ---
-title: Test Article
+title: Test Post
 description: 테스트 게시글
 date: 2024-10-29
 tags: test

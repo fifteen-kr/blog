@@ -18,6 +18,12 @@ export default async function(eleventyConfig) {
     });
 
     eleventyConfig.addWatchTarget("content/**/*.{svg,webp,png,jpeg,jpg}");
+    
+    // @ts-ignore
+    eleventyConfig.addBundle("css", {toFileDirectory: "dist"});
+    
+    // @ts-ignore
+    eleventyConfig.addBundle("js", {toFileDirectory: "dist"});
 
     // OFficial Plugins
     eleventyConfig.addPlugin(pluginSyntaxHighlight, {

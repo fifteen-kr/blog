@@ -1,0 +1,13 @@
+---js
+// <script>
+const eleventyComputed = {
+	permalink: "/tag/",
+};
+---
+<h1>Tags</h1>
+<ul>
+{% for tag in collections | getKeys | filterTagList %}
+	{% set tagUrl %}/tag/{{ tag | slugify }}/{% endset %}
+	<li><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a></li>
+{% endfor %}
+</ul>
