@@ -6,12 +6,14 @@
         <title>{{ title or metadata.title }}</title>
 		<meta name="description" content="{{ description or metadata.description }}"/>
         <meta name="generator" content="{{ eleventy.generator }}"/>
+        {%- css %}{% include "public/css/reset.css" %}{% endcss %}
         {%- css %}{% include "public/css/index.css" %}{% endcss %}
         <style>{% getBundle "css" %}</style>
     </head>
     <body>
         <header>
             <a href="/" class="home-link">{{ metadata.title }}</a>
+            <p class="home-description">{{ metadata.description }}</p>
             <nav>
                 <ul class="nav">
                 {%- for entry in collections.all | eleventyNavigation %}
