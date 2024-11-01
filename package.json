@@ -6,6 +6,7 @@
   "main": "index.js",
   "scripts": {
     "build": "npx @11ty/eleventy",
+    "debug": "cross-env DEBUG=Eleventy* npx @11ty/eleventy --serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -21,6 +22,7 @@
     "zod-validation-error": "^3.4.0"
   },
   "devDependencies": {
-    "@types/luxon": "^3.4.2"
+    "@types/luxon": "^3.4.2",
+    "cross-env": "^7.0.3"
   }
 }
