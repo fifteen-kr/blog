@@ -2,7 +2,7 @@
 title: Test Post
 description: 테스트 게시글
 date: 2024-10-29
-tags: test
+tags: [test, lorem]
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non eros sit amet mi suscipit dignissim non vitae libero. Ut eget maximus turpis, id condimentum turpis. Cras laoreet, sapien quis mattis efficitur, tellus dolor rutrum lacus, nec viverra turpis tellus sed lacus. In ac eleifend purus, a auctor nisl. Nullam elementum, purus ac accumsan varius, purus velit ultricies libero, sed blandit turpis quam et mauris. Nulla sapien ipsum, rutrum sit amet lobortis vel, accumsan non est. Nullam tincidunt dapibus elit, ac iaculis urna tempus eu. Maecenas tortor ex, porta vel malesuada vitae, placerat sed quam. Integer placerat metus sapien, vel elementum lorem porta quis.

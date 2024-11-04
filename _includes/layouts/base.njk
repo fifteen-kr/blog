@@ -12,8 +12,10 @@
     </head>
     <body>
         <header>
-            <a href="/" class="home-link">{{ metadata.title }}</a>
-            <p class="home-description">{{ metadata.description }}</p>
+            <div id="header-halo">
+                <a href="/" class="home-link">{{ metadata.title }}</a>
+                <p class="home-description">{{ metadata.description }}</p>
+            </div>
             <nav>
                 <ul class="nav">
                 {%- for entry in collections.all | eleventyNavigation %}
