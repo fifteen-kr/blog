@@ -1,0 +1,27 @@
+name: Build and Create Artifacts
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build-blog:
+    name: Build Blog
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      - name: Build
+        run: |
+          pnpm dlx @11ty/eleventy
+      - name: Zip Artifacts
+        run: |
+          zip -r blog.zip _site/
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: blog.zip
+          path: blog.zip

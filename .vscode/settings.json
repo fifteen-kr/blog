@@ -3,6 +3,9 @@
         "eleventy",
         "endcss",
         "endfor",
-        "latestpost"
+        "Jimin",
+        "latestpost",
+        "luxon",
+        "syntaxhighlight"
     ]
 }
