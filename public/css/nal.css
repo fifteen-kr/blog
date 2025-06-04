@@ -1,0 +1,119 @@
+:root {
+    /* You may customize these  */
+    --nal-display-font: sans-serif;
+    --nal-body-font: sans-serif;
+    --nal-code-font: monospace;
+
+    --nal-background: #FDFDFD;
+    --nal-foreground: #0E0E0E;
+    --nal-focus: #FF9900;
+
+    --nal-transition-timing-function: cubic-bezier(0.3, -0.5, 0.0, 1.4);
+    --nal-transition-duration: 160ms;
+}
+
+body {
+    font-family: var(--nal-body-font);
+
+    background-color: var(--nal-background);
+    color: var(--nal-foreground);
+}
+
+/* Content Layout */
+
+header {
+    text-align: center;
+}
+
+main {
+    max-width: 48em;
+    margin: 0 auto;
+}
+
+footer {
+    margin-top: 5rem;
+    padding: .25em .5em;
+    font-size: .9rem;
+    text-align: right;
+
+    color: color-mix(in srgb, var(--nal-foreground) 60%, var(--nal-background));
+}
+
+/* Headers */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--nal-display-font);
+    font-weight: bold;
+
+    padding: .5em 1em;
+
+    text-shadow:
+        .015em .03em .04em color-mix(in srgb, var(--nal-foreground) 5%, transparent),
+        .03em .06em .24em color-mix(in srgb, var(--nal-foreground) 8%, transparent);
+
+    &:not(:first-child) {
+        margin-top: 0.75em;
+    }
+}
+
+h1 { font-size: 2.50em; }
+h2 { font-size: 2.00em; }
+h3 { font-size: 1.75em; }
+h4 { font-size: 1.50em; }
+h5 { font-size: 1.25em; }
+h6 { font-size: 1.00em; }
+
+/* Body */
+
+p {
+    padding: .25em .5em;
+}
+
+ol, ul {
+    margin: .75em 0;
+    & > li > ol, & > li > ul {
+        margin: 0 0;
+    }
+}
+
+/* Form Elements */
+
+input[type="text"], input[type="search"], input[type="tel"], input[type="url"], input[type="email"],input[type="password"], input[type="date"],
+input[type="month"], input[type="week"], input[type="time"], input[type="number"], input[type="color"], textarea {
+    border: solid 1px rgba(0, 0, 0, 0.1);
+    border-radius: .25em;
+    padding: .3em .6em;
+}
+
+input[type="button"], input[type="submit"], input[type="reset"], button {
+    cursor: pointer;
+    border: solid 2px rgba(0, 0, 0, 0.1);
+    border-radius: .25em;
+    padding: .3em .6em;
+
+    box-shadow: .03em .06em .18em color-mix(in srgb, var(--nal-foreground) 10%, transparent);
+    transition-timing-function: var(--nal-transition-timing-function);
+    transition-duration: var(--nal-transition-duration);
+    transition-property: box-shadow, transform, border-color;
+
+    &:hover, &:focus:not(:active) {
+        box-shadow: .05em .10em .20em color-mix(in srgb, var(--nal-foreground) 15%, transparent);
+        transform: translate(-1px, -2px);
+    }
+
+    &:active {
+        box-shadow: inset .02em .04em .24em color-mix(in srgb, var(--nal-foreground) 20%, transparent);
+        transform: translate(0, 0);
+    }
+    
+    &:focus:not(:active) {
+        outline: none;
+        border-color: color-mix(in srgb, var(--nal-focus) 75%, transparent);
+    }
+}
+
+/* Codes */
+
+pre, code, kbd {
+    font-family: var(--nal-code-font);
+}

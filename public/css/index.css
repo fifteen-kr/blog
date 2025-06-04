@@ -2,13 +2,9 @@ body {
     font-size: 14px;
 }
 
-header {
-    margin: 1em 0;
-}
-
 div#header-halo {
     text-align: center;
-    margin: 1em 0 1em;
+    margin: 1.25em 0 1.2em;
 
     a.home-link {
         font-size: 3.2em;
@@ -31,15 +27,8 @@ header nav ul.nav {
 }
 
 main {
-    padding: .5em 1em;
-
-    h1 {
-        font-size: 2.5em;
-        margin: .25em 0;
-    }
-
     div.post-metadata {
-        color: #555;
+        color: #777;
     }
 
     p.post-metadata-tags {

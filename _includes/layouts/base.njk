@@ -7,6 +7,7 @@
 		<meta name="description" content="{{ description or metadata.description }}"/>
         <meta name="generator" content="{{ eleventy.generator }}"/>
         {%- css %}{% include "public/css/reset.css" %}{% endcss %}
+        {%- css %}{% include "public/css/nal.css" %}{% endcss %}
         {%- css %}{% include "public/css/index.css" %}{% endcss %}
         <style>{% getBundle "css" %}</style>
     </head>
