@@ -13,6 +13,26 @@ Etiam malesuada cursus feugiat. Aenean mauris libero, finibus non sem at, varius
 
 Ut lobortis purus nec ante gravida efficitur. Donec condimentum, arcu id interdum vulputate, tortor velit tincidunt ex, ut laoreet nunc est et libero. Sed sed diam velit. Vestibulum non pulvinar dui. Etiam id augue non nunc aliquam egestas. Aenean luctus, tortor et interdum auctor, quam diam dapibus felis, a rhoncus tellus mauris ut lacus. Vivamus vestibulum leo quis vehicula eleifend. Fusce ut orci at justo pellentesque ornare. Nunc non laoreet diam. Morbi vestibulum at neque id pretium. Ut viverra feugiat neque, ut fringilla elit volutpat vitae. Phasellus tincidunt nulla vitae tristique bibendum. Fusce ex nisl, vulputate sed euismod quis, eleifend quis quam. Sed eu dolor diam. Duis non dictum dui. Maecenas dapibus rhoncus eros, luctus cursus sapien vestibulum nec.
 
+```js
+function greet() {
+    // Greets the user.
+    console.log("Hello, world!");
+
+    for(let i=0; i<10; ++i) console.log(i);
+}
+
+greet();
+```
+
+```py
+def greet():
+    print("Hello, world!")
+    for i in range(10): print(i)
+
+if __name__ == '__main__':
+    greet()
+```
+
 ```diff-js
  function greet() {
 -  console.log("Hello, world!");

@@ -1,0 +1,43 @@
+/* Visual Studio 2019 Dark Theme, Microsoft (MIT License) */
+
+pre[class^="language-"] {
+    margin: 1em 0;
+
+    background-color: #1E1E1E;
+    color: #DADADA;
+
+    border-radius: .75em;
+
+    padding: .6em .6em;
+
+    span.token {
+        &.keyword {
+            font-weight: bold;
+            color: #569cd6;
+        }
+
+        &.builtin {
+            color: #569cd6;
+        }
+
+        &.string {
+            color: #ce9178;
+        }
+
+        &.number {
+            color: #b5cea8;
+        }
+
+        &.function {
+            color: #DCDCAA;
+        }
+
+        &.comment {
+            color: #57A64A;
+        }
+
+        &.regex {
+            color: #646695;
+        }
+    }
+}

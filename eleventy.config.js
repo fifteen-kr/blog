@@ -28,6 +28,7 @@ export default async function(eleventyConfig) {
     // OFficial Plugins
     eleventyConfig.addPlugin(pluginSyntaxHighlight, {
         preAttributes: {tabindex: 0},
+        errorOnInvalidLanguages: true,
     });
     eleventyConfig.addPlugin(pluginNavigation);
     eleventyConfig.addPlugin(HtmlBasePlugin);

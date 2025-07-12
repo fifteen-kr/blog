@@ -4,5 +4,13 @@ const eleventyNavigation = {
     order: 3,
 };
 ---
+
 # About
-제작 중인 블로그입니다.
+
+수상할 정도로 자바스크립트와 파이썬을 좋아하는 개발자입니다.
+
+## Contact
+
+| Service | Link |
+| ------- | ---- |
+| GitHub | <https://github.com/123jimin> |

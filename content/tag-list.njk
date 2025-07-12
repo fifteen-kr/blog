@@ -4,7 +4,7 @@ const eleventyComputed = {
 	permalink: "/tag/",
 };
 ---
-<h1>Tags</h1>
+<h1>모든 태그 목록</h1>
 <ul>
 {% for tag in collections | getKeys | filterTagList %}
 	{% set tagUrl %}/tag/{{ tag | slugify }}/{% endset %}

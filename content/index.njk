@@ -8,7 +8,7 @@ const numberOfLatestPostsToShow = 3;
 ---
 {% set postCount = collections.posts | length %}
 {% set latestpostCount = postCount | min(numberOfLatestPostsToShow) %}
-<h1>Latest {{ latestpostCount }} Post{% if latestpostCount != 1 %}s{% endif %}</h1>
+<h1>최근 게시글 {{ latestpostCount }}개</h1>
 
 {% set posts = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
 {% set postCounter = postCount %}
