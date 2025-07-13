@@ -121,8 +121,31 @@ main {
     }
 
     ul.links-nextprev {
+        display: flex;
+        flex-direction: row;
+
         & > li {
+            &.links-nextprev-prev {
+                margin-right: auto;
+            }
+
+            &.links-nextprev-next {
+                margin-left: auto;
+                text-align: right;
+            }
+
             list-style: none;
+
+            display: flex;
+            flex-direction: column;
+
+            & > span.label {
+                font-size: .85em;
+            }
+
+            & > a {
+                font-size: 1.05em;
+            }
         }
     }
 }
