@@ -7,6 +7,7 @@
   "scripts": {
     "build": "npx @11ty/eleventy",
     "debug": "cross-env DEBUG=Eleventy* npx @11ty/eleventy --serve",
+    "serve": "npx @11ty/eleventy --serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

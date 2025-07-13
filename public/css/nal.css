@@ -76,6 +76,14 @@ ol, ul {
     }
 }
 
+a {
+    color: rgb(0, 137, 228);
+}
+
+a:hover {
+    opacity: 0.5;
+}
+
 /* Form Elements */
 
 input[type="text"], input[type="search"], input[type="tel"], input[type="url"], input[type="email"],input[type="password"], input[type="date"],
