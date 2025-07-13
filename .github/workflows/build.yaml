@@ -18,11 +18,8 @@ jobs:
       - name: Build
         run: |
           pnpm dlx @11ty/eleventy
-      - name: Zip Artifacts
-        run: |
-          zip -r blog.zip _site/
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
           name: blog.zip
-          path: blog.zip
+          path: _site/
