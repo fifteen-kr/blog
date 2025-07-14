@@ -5,15 +5,14 @@ const eleventyNavigation = {
     order: 1,
 };
 
-const numberOfLatestPostsToShow = 3;
+const numberOfLatestPostsToShow = 1;
 ---
 {% set postCount = collections.posts | length %}
-{% set latestpostCount = postCount | min(numberOfLatestPostsToShow) %}
-<h1>최근 게시글 {{ latestpostCount }}개</h1>
-
 {% set posts = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
-{% set postCounter = postCount %}
-{% include "posts.njk" %}
+
+{% for post in posts | reverse %}
+{% include "parts/post.njk" %}
+{% endfor %}
 
 {% set morePosts = postCount - numberOfLatestPostsToShow %}
 {% if morePosts > 0 %}

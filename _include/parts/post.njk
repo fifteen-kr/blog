@@ -1,0 +1,10 @@
+<article>
+	<h1>{{ post.data.title }}</h1>
+	<div class="post-metadata">
+		<p class="post-metadata-time">Posted at <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time></p>
+		<p class="post-metadata-tags">Tags: {% for tag in post.data.tags | filterTagList %}<a class="post-tag" href="/tag/{{ tag | slugify }}/">{{ tag }}</a>{%- if not loop.last %}, {% endif %}{%- endfor %}</p>
+	</div>
+	<div class="post-body">
+	{{ post.content | safe }}
+	</div>
+</article>

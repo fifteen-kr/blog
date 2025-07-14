@@ -17,6 +17,6 @@ const eleventyComputed = {
 <h1>“{{ tag }}” 태그된 게시글</h1>
 
 {% set posts = collections[tag] %}
-{% include "posts.njk" %}
+{% include "parts/post-list.njk" %}
 
 <p class="see-all-tags">전체 태그 목록은 <a href="tag-list.njk">이 곳</a>에서 볼 수 있습니다.</p>
