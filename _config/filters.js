@@ -1,4 +1,7 @@
+//@ts-check
+
 import { DateTime } from "luxon";
+import katex from "katex";
 
 export default function(eleventyConfig) {
 	eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
@@ -36,4 +39,16 @@ export default function(eleventyConfig) {
 	eleventyConfig.addFilter("filterTagList", function filterTagList(tags) {
 		return (tags || []).filter(tag => ["all", "posts"].indexOf(tag) === -1);
 	});
+
+	eleventyConfig.addFilter('latex', (content) => {
+		const MATH_REGEX = /\$\$([\s\S]+?)\$\$|\$([^\n$]+?)\$/g;
+		return content.replace(MATH_REGEX, (_, display_eq, inline_eq) => {
+			const clean_eq = unescapeHTML(display_eq || inline_eq);
+			return katex.renderToString(clean_eq, {displayMode: !!display_eq, throwOnError: false});
+		});
+	});
 };
+
+function unescapeHTML(html) {
+	return html.replaceAll("&lt;", '<').replaceAll("&gt;", '>');
+}

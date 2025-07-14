@@ -9,6 +9,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non eros sit amet
 
 Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut laoreet condimentum tellus. Aenean sit amet erat at lectus convallis convallis. Maecenas eu purus non odio iaculis feugiat quis et dui. Mauris faucibus facilisis iaculis. In a urna eget nisl rhoncus iaculis. Praesent porttitor orci rhoncus pulvinar pretium. Vestibulum massa mi, lacinia vel nulla ut, aliquet iaculis magna. Nam nisl lacus, accumsan nec enim eu, sagittis ullamcorper arcu. Sed felis ligula, volutpat in consectetur in, molestie id orci.
 
+$$f{\left( a \right)} = \frac{1}{2\pi i} \oint_{\gamma} \frac{f{\left( z \right)}}{z - a} dz$$
+
+Give me $\left(\sqrt 2\right)^{4}$ dollars!
+
 Etiam malesuada cursus feugiat. Aenean mauris libero, finibus non sem at, varius consequat elit. Donec maximus felis nec arcu laoreet lacinia. Cras pretium arcu at gravida venenatis. Etiam sem est, suscipit vitae ante ut, luctus cursus nisl. Fusce bibendum nulla nec eros fringilla consequat. Proin arcu diam, aliquet at aliquet et, eleifend et velit. Mauris vel arcu id lacus vehicula tincidunt in sed nunc. Maecenas imperdiet a enim id condimentum. Pellentesque non dolor venenatis, pretium nibh vitae, fermentum dui. Interdum et malesuada fames ac ante ipsum primis in faucibus.
 
 Ut lobortis purus nec ante gravida efficitur. Donec condimentum, arcu id interdum vulputate, tortor velit tincidunt ex, ut laoreet nunc est et libero. Sed sed diam velit. Vestibulum non pulvinar dui. Etiam id augue non nunc aliquam egestas. Aenean luctus, tortor et interdum auctor, quam diam dapibus felis, a rhoncus tellus mauris ut lacus. Vivamus vestibulum leo quis vehicula eleifend. Fusce ut orci at justo pellentesque ornare. Nunc non laoreet diam. Morbi vestibulum at neque id pretium. Ut viverra feugiat neque, ut fringilla elit volutpat vitae. Phasellus tincidunt nulla vitae tristique bibendum. Fusce ex nisl, vulputate sed euismod quis, eleifend quis quam. Sed eu dolor diam. Duis non dictum dui. Maecenas dapibus rhoncus eros, luctus cursus sapien vestibulum nec.

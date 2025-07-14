@@ -5,6 +5,6 @@
 		<p class="post-metadata-tags">Tags: {% for tag in post.data.tags | filterTagList %}<a class="post-tag" href="/tag/{{ tag | slugify }}/">{{ tag }}</a>{%- if not loop.last %}, {% endif %}{%- endfor %}</p>
 	</div>
 	<div class="post-body">
-	{{ post.content | safe }}
+	{{ post.content | latex | safe }}
 	</div>
 </article>
