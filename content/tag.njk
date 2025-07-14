@@ -14,9 +14,9 @@ const eleventyComputed = {
 	permalink: function(data){ return `/tag/${this.slugify(data.tag)}/`; },
 };
 ---
-<h1>“{{ tag }}” 태그된 게시글</h1>
+<h1>“{{ tag }}” 태그가 달린 게시글 목록</h1>
+
+<p>전체 태그 목록은 <a href="tag-list.njk">이 곳</a>에서 확인할 수 있습니다.</p>
 
 {% set posts = collections[tag] %}
 {% include "parts/post-list.njk" %}
-
-<p class="see-all-tags">전체 태그 목록은 <a href="tag-list.njk">이 곳</a>에서 볼 수 있습니다.</p>

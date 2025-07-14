@@ -6,7 +6,7 @@ const eleventyComputed = {
 ---
 <h1>모든 태그 목록</h1>
 <ul>
-{% for tag in collections | getKeys | filterTagList %}
+{% for tag in collections | getKeys | filterTagList | sort %}
 	{% set tagUrl %}/tag/{{ tag | slugify }}/{% endset %}
 	<li><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a></li>
 {% endfor %}
