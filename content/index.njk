@@ -14,7 +14,8 @@ const numberOfLatestPostsToShow = 1;
 {% include "parts/post.njk" %}
 {% endfor %}
 
-{% set morePosts = postCount - numberOfLatestPostsToShow %}
-{% if morePosts > 0 %}
-<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="post.njk">the archive</a>.</p>
+{% if postCount > numberOfLatestPostsToShow %}
+<p class="post-list-footer">
+    <a href="archive.njk">모든 게시물 목록</a>에서 {{ postCount - numberOfLatestPostsToShow }}개의 게시글을 더 볼 수 있습니다.
+</p>
 {% endif %}

@@ -1,5 +1,5 @@
 <article>
-	<h1>{{ post.data.title }}</h1>
+	<h1><a href="{{ post.url }}" class="post-link">{{ post.data.title }}</a></h1>
 	<div class="post-metadata">
 		<p class="post-metadata-time">Posted at <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time></p>
 		<p class="post-metadata-tags">Tags: {% for tag in post.data.tags | filterTagList %}<a class="post-tag" href="/tag/{{ tag | slugify }}/">{{ tag }}</a>{%- if not loop.last %}, {% endif %}{%- endfor %}</p>

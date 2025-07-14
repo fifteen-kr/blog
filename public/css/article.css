@@ -1,0 +1,41 @@
+main article {
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+        padding: .5em 0;
+
+        a.post-link {
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+    
+    div.post-metadata {
+        color: #777;
+    }
+
+    p.post-metadata-tags {
+        a.post-tag {
+            color: #55F;
+            font-weight: bold;
+
+            &:hover {
+                color: #99F;
+            }
+        }
+    }
+
+    div.post-body {
+        padding: 1em;
+
+        p {
+            line-height: 1.6em;
+            margin-bottom: .5em;
+        }
+    }
+
+    p.see-all-tags {
+        margin-top: 1em;
+    }
+}

@@ -92,32 +92,13 @@ header nav ul.nav {
 }
 
 main {
-    div.post-metadata {
-        color: #777;
-    }
+    display: flex;
+    flex-direction: column;
 
-    p.post-metadata-tags {
-        a.post-tag {
-            color: #55F;
-            font-weight: bold;
-
-            &:hover {
-                color: #99F;
-            }
-        }
-    }
-
-    div.post-body {
-        padding: 1em;
-
-        p {
-            line-height: 1.6em;
-            margin-bottom: .5em;
-        }
-    }
-
-    p.see-all-tags {
-        margin-top: 1em;
+    & > p.post-list-footer {
+        opacity: 0.8;
+        margin-top: 2em;
+        font-size: .92em;
     }
 
     ul.links-nextprev {

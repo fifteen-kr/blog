@@ -1,6 +1,7 @@
 ---
 layout: layouts/base.njk
 ---
+{% set post = collections.posts | getCollectionItem %}
 {% include "parts/post.njk" %}
 {%- if collections.posts %}
 {%- set prevPost = collections.posts | getPreviousCollectionItem %}
