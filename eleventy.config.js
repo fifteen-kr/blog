@@ -7,7 +7,7 @@ import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 
 import pluginFilters from "./_config/filters.js";
 
-/** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
+/** @param {import("@11ty/eleventy/UserConfig").default} eleventyConfig */
 export default async function(eleventyConfig) {
     eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
         if(data.draft && process.env.ELEVENTY_RUN_MODE === 'build') return false;
@@ -59,7 +59,7 @@ export const config = {
 
     dir: {
         input: "content",
-		includes: "../_includes",
+		includes: "../_include",
 		data: "../_data",
         output: "_site",
     },
