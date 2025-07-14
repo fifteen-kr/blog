@@ -95,7 +95,24 @@ main {
     display: flex;
     flex-direction: column;
 
-    & > p.post-list-footer {
+    & > table.post-list {
+        time {
+            font-size: .86em;
+            opacity: 0.7;
+        }
+
+        tr td:first-child {
+            text-align: center;
+            width: 6em;
+        }
+
+        tr td:nth-child(2) {
+            text-align: center;
+            font-size: 1.1em;
+        }
+    }
+
+    & > p.post-content-list-footer {
         opacity: 0.8;
         margin-top: 2em;
         font-size: .92em;

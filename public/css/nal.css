@@ -45,7 +45,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--nal-display-font);
     font-weight: bold;
 
-    padding: .5em 1em;
+    padding: .5em 0;
 
     text-shadow:
         .015em .03em .04em color-mix(in srgb, var(--nal-foreground) 5%, transparent),

@@ -15,7 +15,7 @@ const numberOfLatestPostsToShow = 1;
 {% endfor %}
 
 {% if postCount > numberOfLatestPostsToShow %}
-<p class="post-list-footer">
+<p class="post-content-list-footer">
     <a href="archive.njk">모든 게시물 목록</a>에서 {{ postCount - numberOfLatestPostsToShow }}개의 게시글을 더 볼 수 있습니다.
 </p>
 {% endif %}
