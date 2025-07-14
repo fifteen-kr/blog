@@ -2,8 +2,10 @@ main article {
     display: flex;
     flex-direction: column;
 
+    padding: .5em .3em;
+
     h1 {
-        padding: .5em 0;
+        padding: .36em .3em .15em;
 
         a.post-link {
             color: inherit;
@@ -12,6 +14,12 @@ main article {
     }
     
     div.post-metadata {
+        position: relative;
+        top: -.1em;
+        margin-left: auto;
+        text-align: right;
+        font-size: .8em;
+        line-height: 1em;
         color: #777;
     }
 

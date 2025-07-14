@@ -5,7 +5,7 @@ const eleventyNavigation = {
     order: 1,
 };
 
-const numberOfLatestPostsToShow = 1;
+const numberOfLatestPostsToShow = 10;
 ---
 {% set postCount = collections.posts | length %}
 {% set posts = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
@@ -14,8 +14,10 @@ const numberOfLatestPostsToShow = 1;
 {% include "parts/post.njk" %}
 {% endfor %}
 
-{% if postCount > numberOfLatestPostsToShow %}
 <p class="post-content-list-footer">
+{% if postCount > numberOfLatestPostsToShow %}
     <a href="archive.njk">모든 게시물 목록</a>에서 {{ postCount - numberOfLatestPostsToShow }}개의 게시글을 더 볼 수 있습니다.
-</p>
+{% else %}
+    이게 마지막 게시글이에요!
 {% endif %}
+</p>
