@@ -41,6 +41,8 @@ export default function(eleventyConfig) {
 	});
 
 	eleventyConfig.addFilter('latex', (content) => {
+		if(!content) return content;
+
 		const MATH_REGEX = /\$\$([\s\S]+?)\$\$|\$([^\n$]+?)\$/g;
 		return content.replace(MATH_REGEX, (_, display_eq, inline_eq) => {
 			const clean_eq = unescapeHTML(display_eq || inline_eq);
