@@ -50,5 +50,11 @@ export default function(eleventyConfig) {
 };
 
 function unescapeHTML(html) {
-	return html.replaceAll("&lt;", '<').replaceAll("&gt;", '>');
+	return html.replaceAll(/&(lt|gt|amp);/g , (_, s) => {
+		switch(s) {
+			case 'lt': return '<';
+			case 'gt': return '>';
+			case 'amp': return '&';
+		}
+	});
 }
