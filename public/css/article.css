@@ -74,6 +74,16 @@ main article {
     section.footnotes {
         font-size: .8em;
     }
+
+    blockquote {
+        border-left: solid .25rem rgba(0, 0, 0, 0.15);
+        background-color: rgba(0, 0, 0, 0.04);
+        display: flex; flex-direction: column;
+        margin: .5em 0;
+        padding-top: .65em;
+        padding-bottom: .35em;
+        padding-left: .5em;
+    }
 }
 
 @keyframes fade-highlight {

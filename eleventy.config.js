@@ -7,6 +7,7 @@ import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 
 import markdownItFootnote from "markdown-it-footnote";
 import markdownItKatex_wrap from "@vscode/markdown-it-katex";
+import { alert as markdownItAlert } from "@mdit/plugin-alert";
 
 const markdownItKatex = markdownItKatex_wrap['default'];
 
@@ -49,6 +50,7 @@ export default async function(eleventyConfig) {
     eleventyConfig.amendLibrary("md", (md) => {
         md.use(markdownItFootnote);
         md.use(markdownItKatex);
+        md.use(markdownItAlert);
     });
 
     // Filters

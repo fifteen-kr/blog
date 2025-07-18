@@ -32,6 +32,7 @@ const eleventyNavigation = {
 - `markdown-it`에 사용 중인 플러그인은 다음과 같습니다.
   - [@vscode/markdown-it-katex](https://www.npmjs.com/package/@vscode/markdown-it-katex)
   - [markdown-it-footnote](https://www.npmjs.com/package/markdown-it-footnote)
+  - [@mdit/plugin-alert](https://www.npmjs.com/package/@mdit/plugin-alert)
 - 댓글 기능은 [utterances](https://utteranc.es)를 이용합니다.
 - 블로그 뿐만이 아니라, 제 사이트의 대부분의 컨텐츠는 Debian 서버에서 nginx를 통해 서빙됩니다.
   - 중간에 Cloudflare를 두고 있습니다.
