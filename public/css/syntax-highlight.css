@@ -6,9 +6,9 @@ pre[class^="language-"] {
     background-color: #1E1E1E;
     color: #DADADA;
 
-    border-radius: .75em;
+    border-radius: .4em;
 
-    padding: .6em .6em;
+    padding: .45em .6em;
 
     span.token {
         &.keyword {
