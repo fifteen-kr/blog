@@ -7,18 +7,18 @@ const eleventyNavigation = {
 
 const numberOfLatestPostsToShow = 10;
 ---
-{% set postCount = collections.posts | length %}
-{% set posts = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
-{% set enableComment = false %}
+{%- set postCount = collections.posts | length %}
+{%- set posts = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
+{%- set enableComment = false %}
 
-{% for post in posts | reverse %}
-{% include "parts/post.njk" %}
-{% endfor %}
+{%- for post in posts | reverse %}
+{%- include "parts/post.njk" %}
+{%- endfor %}
 
 <p class="post-content-list-footer">
-{% if postCount > numberOfLatestPostsToShow %}
+{%- if postCount > numberOfLatestPostsToShow %}
     <a href="archive.njk">모든 게시물 목록</a>에서 {{ postCount - numberOfLatestPostsToShow }}개의 게시글을 더 볼 수 있습니다.
-{% else %}
+{%- else %}
     {{ text.noMorePost }}
-{% endif %}
+{%- endif %}
 </p>

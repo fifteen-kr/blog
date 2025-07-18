@@ -38,7 +38,8 @@ export default async function(eleventyConfig) {
         toFileDirectory: "dist",
         transforms: [
             async function(content) {
-                return await POSTCSS_INSTANCE.process(content, {from: (void 0)});
+                const result = await POSTCSS_INSTANCE.process(content, {from: (void 0)});
+                return result.css;
             },
         ],
     });

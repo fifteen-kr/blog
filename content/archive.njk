@@ -7,5 +7,5 @@ const eleventyNavigation = {
 ---
 <h1>{{ text.archive }}</h1>
 
-{% set posts = collections.posts %}
+{%- set posts = collections.posts %}
 {% include "parts/post-list.njk" %}

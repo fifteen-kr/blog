@@ -1,3 +1,9 @@
+{%- css "inline" %}{% include "public/css/reset.css" %}{% endcss -%}
+{%- css "inline" %}{% include "public/css/nal.css" %}{% endcss -%}
+{%- css "inline" %}{% include "public/css/index.css" %}{% endcss -%}
+{%- css "inline" %}{% include "public/css/article.css" %}{% endcss -%}
+{%- css "inline" %}{% include "public/css/markdown-alert.css" %}{% endcss -%}
+{%- css "link" %}{% include "public/css/syntax-highlight.css" %}{% endcss -%}
 <!DOCTYPE html>
 <html lang="{{ metadata.language }}">
     <head>
@@ -6,13 +12,8 @@
         <title>{{ title or metadata.title }}</title>
 		<meta name="description" content="{{ description or metadata.description }}"/>
         <meta name="generator" content="{{ eleventy.generator }}"/>
-        {%- css "inline" %}{% include "public/css/reset.css" %}{% endcss %}
-        {%- css "inline" %}{% include "public/css/nal.css" %}{% endcss %}
-        {%- css "inline" %}{% include "public/css/index.css" %}{% endcss %}
-        {%- css "inline" %}{% include "public/css/article.css" %}{% endcss %}
-        {%- css "inline" %}{% include "public/css/markdown-alert.css" %}{% endcss %}
         <style>{% getBundle "css", "inline" %}</style>
-        <link rel="stylesheet" href="/css/syntax-highlight.css"/>
+        <link rel="stylesheet" href="{% getBundleFileUrl 'css', 'link' %}">
         <link rel="stylesheet" href="https://unpkg.com/katex@latest/dist/katex.min.css"/>
     </head>
     <body>

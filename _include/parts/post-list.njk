@@ -6,11 +6,11 @@
     </tr>
   </thead>
   <tbody>
-  {% for post in posts | reverse %}
+  {%- for post in posts | reverse %}
   <tr>
     <td><time class="post-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("yyyy-LL-dd") }}</time></td>
     <td><a href="{{ post.url }}" class="post-link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a></td>
   </tr>
-  {% endfor %}
+  {%- endfor %}
   </tbody>
 </table>
