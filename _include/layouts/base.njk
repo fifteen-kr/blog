@@ -3,7 +3,11 @@
 {%- css "inline" %}{% include "public/css/index.css" %}{% endcss -%}
 {%- css "inline" %}{% include "public/css/article.css" %}{% endcss -%}
 {%- css "inline" %}{% include "public/css/markdown-alert.css" %}{% endcss -%}
+
 {%- css "link" %}{% include "public/css/syntax-highlight.css" %}{% endcss -%}
+{% set externalCSSUrlList = [ "https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" ] %}
+
+{%- js %}{% include "public/js/index.js" %}{% endjs -%}
 <!DOCTYPE html>
 <html lang="{{ metadata.language }}">
     <head>
@@ -13,8 +17,12 @@
 		<meta name="description" content="{{ description or metadata.description }}"/>
         <meta name="generator" content="{{ eleventy.generator }}"/>
         <style>{% getBundle "css", "inline" %}</style>
-        <link rel="stylesheet" href="{% getBundleFileUrl 'css', 'link' %}">
-        <link rel="stylesheet" href="https://unpkg.com/katex@latest/dist/katex.min.css"/>
+        <link rel="preload" href="{% getBundleFileUrl 'css', 'link' %}" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+        <noscript><link rel="stylesheet" href="{% getBundleFileUrl 'css', 'link' %}"/></noscript>
+        {%- for url in externalCSSUrlList %}
+        <link rel="preload" href="{{ url }}" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+        <noscript><link rel="stylesheet" href="{{ url }}"/></noscript>
+        {%- endfor %}
     </head>
     <body>
         <header>
