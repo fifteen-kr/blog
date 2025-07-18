@@ -20,6 +20,8 @@ const eleventyNavigation = {
 
 이 블로그의 기술 스택에 대한 [글](http://blog.0xF.kr/post/2025/07-15-blog/)을 적었습니다.
 
+블로그의 전체 소스 코드는 <https://github.com/fifteen-kr/blog> 에서 확인할 수 있습니다.
+
 - 인스턴스는 Google Cloud에 있습니다.
 - Static site generator로 [11ty](https://www.11ty.dev/)를 이용합니다.
   - 템플릿 언어로는 [Nunjucks](https://mozilla.github.io/nunjucks/)를 사용합니다.
