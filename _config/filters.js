@@ -1,14 +1,6 @@
 //@ts-check
 
 import { DateTime } from "luxon";
-import postcss from "postcss";
-import cssnano from "cssnano";
-
-const CSSNANO_CONFIG = {
-	preset: 'default',
-};
-
-const POSTCSS_INSTANCE = postcss([cssnano(CSSNANO_CONFIG)]);
 
 export default function(eleventyConfig) {
 	eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
@@ -45,9 +37,5 @@ export default function(eleventyConfig) {
 
 	eleventyConfig.addFilter("filterTagList", function filterTagList(tags) {
 		return (tags || []).filter(tag => ["all", "posts"].indexOf(tag) === -1);
-	});
-
-	eleventyConfig.addAsyncFilter("minifyCSS", async function(code) {
-		return POSTCSS_INSTANCE.process(code, {from: (void 0)});
 	});
 };
