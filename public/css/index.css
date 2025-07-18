@@ -99,6 +99,11 @@ main {
     flex-direction: column;
     gap: 2em;
 
+    & > h1 {
+        margin-top: .5em;
+        text-align: center;
+    }
+
     & > table.post-list {
         time {
             font-size: .86em;
