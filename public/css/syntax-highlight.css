@@ -13,7 +13,7 @@ pre[class^="language-"] {
     span.token {
         &.keyword {
             font-weight: bold;
-            color: #569cd6;
+            color: rgb(216, 160, 223);
         }
 
         &.builtin {

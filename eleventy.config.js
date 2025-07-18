@@ -5,6 +5,11 @@ import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import pluginNavigation from "@11ty/eleventy-navigation";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 
+import markdownItFootnote from "markdown-it-footnote";
+import markdownItKatex_wrap from "@vscode/markdown-it-katex";
+
+const markdownItKatex = markdownItKatex_wrap['default'];
+
 import pluginFilters from "./_config/filters.js";
 
 /** @param {import("@11ty/eleventy/UserConfig").default} eleventyConfig */
@@ -38,6 +43,12 @@ export default async function(eleventyConfig) {
             loading: 'lazy',
             decoding: 'async',
         },
+    });
+
+    // Markdown
+    eleventyConfig.amendLibrary("md", (md) => {
+        md.use(markdownItFootnote);
+        md.use(markdownItKatex);
     });
 
     // Filters

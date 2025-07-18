@@ -97,6 +97,7 @@ nav.main-nav > ul {
 main {
     display: flex;
     flex-direction: column;
+    gap: 2em;
 
     & > table.post-list {
         time {
