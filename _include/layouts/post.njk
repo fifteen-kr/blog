@@ -2,14 +2,9 @@
 layout: layouts/base.njk
 ---
 {% set post = collections.all | getCollectionItem %}
-{% include "parts/post.njk" %}
+{% set enableComment = true %}
 {%- if collections.posts %}
 {%- set prevPost = collections.posts | getPreviousCollectionItem %}
 {%- set nextPost = collections.posts | getNextCollectionItem %}
-{%- if prevPost or nextPost %}
-<ul class="links-nextprev">
-	{%- if prevPost %}<li class="links-nextprev-prev"><span class="label">← Prev</span><a href="{{ prevPost.url }}">{{ prevPost.data.title }}</a></li>{% endif %}
-	{%- if nextPost %}<li class="links-nextprev-next"><span class="label">Next →</span><a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>{% endif %}
-</ul>
 {%- endif %}
-{%- endif %}
+{% include "parts/post.njk" %}

@@ -1,11 +1,11 @@
 ---js
 // <script>
 const eleventyNavigation = {
-    key: "Archive",
+    key: "All Posts",
     order: 2,
 };
 ---
-<h1>모든 게시글 목록</h1>
+<h1>{{ text.archive }}</h1>
 
 {% set posts = collections.posts %}
 {% include "parts/post-list.njk" %}

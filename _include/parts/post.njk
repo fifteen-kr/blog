@@ -7,4 +7,29 @@
 	<div class="post-body">
 	{{ post.content | safe }}
 	</div>
+	{%- if prevPost or nextPost %}
+	<ul class="links-nextprev">
+		{%- if prevPost %}<li class="links-nextprev-prev"><span class="label">← Prev</span><a href="{{ prevPost.url }}">{{ prevPost.data.title }}</a></li>{% endif %}
+		{%- if nextPost %}<li class="links-nextprev-next"><span class="label">Next →</span><a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>{% endif %}
+	</ul>
+	{%- endif %}
+	{% if utterance.enabled %}
+	{% if enableComment %}
+	<div id="comment" class="post-comment enabled">
+		<script
+			src="https://utteranc.es/client.js"
+			repo="{{ utterance.repo }}"
+			issue-term="{{ post.url | slugify }}"
+			label="{{ utterance.label }}"
+			theme="github-light"
+			crossorigin="anonymous"
+			async
+		></script>
+	</div>
+	{% else %}
+	<div class="post-comment disabled">
+		<a href="{{ post.url }}#comment">{{ text.clickToComment }}</a> 
+	</div>
+	{% endif %}
+	{% endif %}
 </article>

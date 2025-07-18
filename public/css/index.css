@@ -157,4 +157,12 @@ main {
             }
         }
     }
+
+    div.post-comment {
+        text-align: center;
+
+        &.enabled {
+            margin-top: 1.5em;
+        }
+    }
 }
