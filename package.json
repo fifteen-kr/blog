@@ -27,6 +27,8 @@
   },
   "devDependencies": {
     "@types/luxon": "^3.6.2",
-    "cross-env": "^7.0.3"
+    "cross-env": "^7.0.3",
+    "cssnano": "^7.1.0",
+    "postcss": "^8.5.6"
   }
 }
