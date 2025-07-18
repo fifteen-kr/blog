@@ -12,7 +12,7 @@ const eleventyNavigation = {
 ## 타 사이트 계정
 
 | Service | Link |
-| ------- | ---- |
+|:-------:|:----:|
 | GitHub | <https://github.com/123jimin> |
 | BOJ | <https://www.acmicpc.net/user/jiminp> |
 
