@@ -39,13 +39,3 @@ export default function(eleventyConfig) {
 		return (tags || []).filter(tag => ["all", "posts"].indexOf(tag) === -1);
 	});
 };
-
-function unescapeHTML(html) {
-	return html.replaceAll(/&(lt|gt|amp);/g , (_, s) => {
-		switch(s) {
-			case 'lt': return '<';
-			case 'gt': return '>';
-			case 'amp': return '&';
-		}
-	});
-}
