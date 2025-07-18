@@ -1,10 +1,10 @@
 ---
 layout: layouts/base.njk
 ---
-{% set post = collections.all | getCollectionItem %}
-{% set enableComment = true %}
+{%- set post = collections.all | getCollectionItem %}
+{%- set enableComment = true %}
 {%- if collections.posts %}
 {%- set prevPost = collections.posts | getPreviousCollectionItem %}
 {%- set nextPost = collections.posts | getNextCollectionItem %}
 {%- endif %}
-{% include "parts/post.njk" %}
+{%- include "parts/post.njk" %}

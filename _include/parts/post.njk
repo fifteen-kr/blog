@@ -5,7 +5,7 @@
 		<p class="post-metadata-tags">Tags: {% for tag in post.data.tags | filterTagList %}<a class="post-tag" href="/tag/{{ tag | slugify }}/">{{ tag }}</a>{%- if not loop.last %}, {% endif %}{%- endfor %}</p>
 	</div>
 	<div class="post-body">
-	{{ post.content | safe }}
+	{{- post.content | safe -}}
 	</div>
 	{%- if prevPost or nextPost %}
 	<ul class="links-nextprev">
@@ -13,8 +13,8 @@
 		{%- if nextPost %}<li class="links-nextprev-next"><span class="label">Next →</span><a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>{% endif %}
 	</ul>
 	{%- endif %}
-	{% if utterance.enabled %}
-	{% if enableComment %}
+	{%- if utterance.enabled %}
+	{%- if enableComment %}
 	<div id="comment" class="post-comment enabled">
 		<script
 			src="https://utteranc.es/client.js"
@@ -26,10 +26,10 @@
 			async
 		></script>
 	</div>
-	{% else %}
+	{%- else %}
 	<div class="post-comment disabled">
 		<a href="{{ post.url }}#comment">{{ text.clickToComment }}</a> 
 	</div>
-	{% endif %}
-	{% endif %}
+	{%- endif %}
+	{%- endif %}
 </article>
