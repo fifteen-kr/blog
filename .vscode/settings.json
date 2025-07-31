@@ -1,11 +1,19 @@
 {
     "cSpell.words": [
+        "bytearray",
+        "defaultdict",
+        "deque",
         "eleventy",
         "endcss",
         "endfor",
+        "frozenset",
+        "getitem",
+        "heapq",
         "Jimin",
         "latestpost",
         "luxon",
-        "syntaxhighlight"
+        "memoryview",
+        "syntaxhighlight",
+        "unhashable"
     ]
 }
