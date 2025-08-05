@@ -7,13 +7,18 @@
         "endcss",
         "endfor",
         "frozenset",
+        "getattr",
         "getitem",
         "heapq",
+        "isinstance",
         "Jimin",
         "latestpost",
         "luxon",
         "memoryview",
+        "stdev",
+        "stmts",
         "syntaxhighlight",
+        "timeit",
         "unhashable"
     ]
 }

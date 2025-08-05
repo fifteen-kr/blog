@@ -68,6 +68,5 @@ for line in it:
 
 `sys.stdin` 대신 `sys.stdin.buffer`, `open(0)` 대신 `open(0, mode='rb')`를 사용해 `str` 대신 `bytes`를 입력으로 받게 할 수도 있습니다. 다만 이렇게 바꾸면, 성능 향상이 큰 경우도 있지만, 예상치 못하게 성능이 약간 나빠지는 경우도 있습니다. 정확한 이유는 모르겠네요....
 
-[^1]: 좀 더 진지한 이유로는, "이왕이면 최신 버전의 파이썬을 쓰고 싶다", "짧은 코드는 CPython에서 실행 시간이 더 빠르다", "CPython으로 통과시키는 게 재밌잖아" 등이 있습니다.
 [^2]: 놀랍게도 `-O`, `-OO` 플래그가 [있습니다](https://docs.python.org/3/using/cmdline.html#cmdoption-O). 이것들로 활성화되는 최적화라고는 "`assert` 제거", "docstring 제거"와 같이 너무나도 사소한 최적화밖에 없지만요....
 [^3]: 파이썬에 [JIT](https://peps.python.org/pep-0744/)이 기본으로 활성화되면 달라질 수도 있습니다만, 불행히도 아직은 아닙니다.

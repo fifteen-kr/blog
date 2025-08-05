@@ -2,7 +2,7 @@
     /* You may customize these  */
     --nal-display-font: sans-serif;
     --nal-body-font: sans-serif;
-    --nal-code-font: monospace;
+    --nal-code-font: "Consolas", monospace;
 
     --nal-background: #FDFDFD;
     --nal-foreground: #0E0E0E;
