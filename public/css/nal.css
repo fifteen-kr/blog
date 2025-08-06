@@ -129,3 +129,11 @@ input[type="button"], input[type="submit"], input[type="reset"], button {
 pre, code, kbd {
     font-family: var(--nal-code-font);
 }
+
+:not(pre) > code {
+    user-select: all;
+    background-color: color-mix(in srgb, var(--nal-foreground) 5%, transparent);
+    border: solid 1px color-mix(in srgb, var(--nal-foreground) 15%, transparent);
+    padding: .05em .25em;
+    border-radius: 4px;
+}
