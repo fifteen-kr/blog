@@ -1,9 +1,11 @@
 {
     "cSpell.words": [
+        "autorange",
         "bytearray",
         "defaultdict",
         "deque",
         "eleventy",
+        "elif",
         "endcss",
         "endfor",
         "frozenset",
@@ -11,13 +13,17 @@
         "getitem",
         "heapq",
         "isinstance",
+        "itertools",
         "Jimin",
         "latestpost",
         "luxon",
         "memoryview",
+        "repr",
+        "staticmethod",
         "stdev",
         "stmts",
         "syntaxhighlight",
+        "taskset",
         "timeit",
         "unhashable"
     ]
