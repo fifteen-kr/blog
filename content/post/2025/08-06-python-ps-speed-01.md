@@ -1,5 +1,4 @@
 ---
-draft: true
 title: "PS용 파이썬 성능 최적화 #1: 프로파일링"
 date: 2025-08-06
 tags: [ps, python, optimization]
